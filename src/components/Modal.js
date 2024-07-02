@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const MainContainer = styled.div`
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.6
+    );
   position: fixed;
   top: 0;
   left: 0;
