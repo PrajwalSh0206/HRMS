@@ -7,6 +7,7 @@ import Signup from "../pages/signup/Signup";
 import Login from "../pages/login/Login";
 import Landingpage from "../pages/Landingpage/Landingpage";
 import Dashboard from "../pages/Dashboard/Dashboard";
+import CompanyDetails from "../pages/company/CompanyDetails";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "/companydetails",
+    element: <CompanyDetails />,
   },
 ]);
 

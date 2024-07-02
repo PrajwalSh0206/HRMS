@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import HRM from "../../assets/images/Logo.jpg";
 import { Button, TextField } from "@mui/material";
-import { FREE_TRIAL } from "../../constants/textConstants";
+import { COMPANY_DETAILS, FREE_TRIAL } from "../../constants/textConstants";
+import { TextareaAutosize } from "@mui/base/TextareaAutosize";
 import Modal from "../../components/Modal";
 
 const MainContainer = styled.div`
@@ -45,36 +46,31 @@ const focusedTextFieldStyle = {
   },
 };
 
-export default function Signup() {
+export default function CompanyDetails() {
   return (
     <MainContainer>
       <div>
         <LogoContainer>
           <img src={HRM} />
-          <Text>{FREE_TRIAL}</Text>
+          <Text>{COMPANY_DETAILS}</Text>
         </LogoContainer>
         <FormContainer>
           <TextField
             id="filled-basic"
-            label="Name"
+            label="Company Name"
+            variant="outlined"
+            sx={focusedTextFieldStyle}
+            minRows={3}
+          />
+          <TextField
+            id="filled-basic"
+            label="Company Address"
             variant="outlined"
             sx={focusedTextFieldStyle}
           />
           <TextField
             id="filled-basic"
-            label="Email"
-            variant="outlined"
-            sx={focusedTextFieldStyle}
-          />
-          <TextField
-            id="filled-basic"
-            label="Password"
-            variant="outlined"
-            sx={focusedTextFieldStyle}
-          />
-          <TextField
-            id="filled-basic"
-            label="Phone Number"
+            label="Register Number"
             variant="outlined"
             sx={focusedTextFieldStyle}
           />
@@ -98,9 +94,11 @@ export default function Signup() {
               },
             }}
           >
-            FREE SIGN UP
+            Submit
           </Button>
         </SignupBtn>
+
+        <Modal text={"HELLO"} />
       </div>
     </MainContainer>
   );
