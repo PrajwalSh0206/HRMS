@@ -1,10 +1,10 @@
 import React from "react";
-import Signup from "./pages/signup/Signup";
+import Route from "./Routes/Route";
 
 export default function App() {
   return (
     <div>
-      <Signup />
+      <Route />
     </div>
   );
 }

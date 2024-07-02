@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import HRM from "../../assets/images/Logo.jpg";
 import { Button, TextField } from "@mui/material";
-import { FREE_TRIAL } from "../../constants/textConstants";
+import { LOGIN_HERE, WELCOME } from "../../constants/textConstants";
 
 const MainContainer = styled.div`
   max-width: 900px;
@@ -44,43 +44,53 @@ const focusedTextFieldStyle = {
   },
 };
 
-export default function Signup() {
+export default function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [disable, setDisable] = useState(false);
+  console.log(email);
+  console.log(password);
+
+  const handleChange = (e) => {
+    let errorMsg;
+    if (name == "email") setEmail(e.target.value);
+    if (name == "password") setPassword(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!email && !password) setDisable(true);
+  };
   return (
     <MainContainer>
       <div>
         <LogoContainer>
           <img src={HRM} />
-          <Text>{FREE_TRIAL}</Text>
+          <Text>{WELCOME}</Text>
+          <Text>{LOGIN_HERE}</Text>
         </LogoContainer>
         <FormContainer>
-          <TextField
-            id="filled-basic"
-            label="Name"
-            variant="outlined"
-            sx={focusedTextFieldStyle}
-          />
           <TextField
             id="filled-basic"
             label="Email"
             variant="outlined"
             sx={focusedTextFieldStyle}
+            name="email"
+            onChange={handleChange}
           />
           <TextField
             id="filled-basic"
             label="Password"
             variant="outlined"
             sx={focusedTextFieldStyle}
-          />
-          <TextField
-            id="filled-basic"
-            label="Phone Number"
-            variant="outlined"
-            sx={focusedTextFieldStyle}
+            name="password"
+            onChange={handleChange}
           />
         </FormContainer>
         <SignupBtn>
           <Button
             variant="outlined"
+            value="Login"
             sx={{
               border: "none",
               border: "1px solid #ccc",
@@ -96,8 +106,10 @@ export default function Signup() {
                 backgroundColor: "#8D75F5",
               },
             }}
+            onSubmit={handleSubmit}
+            disabled={disable}
           >
-            FREE SIGN UP
+            Login
           </Button>
         </SignupBtn>
       </div>
