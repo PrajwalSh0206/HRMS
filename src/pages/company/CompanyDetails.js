@@ -97,8 +97,6 @@ export default function CompanyDetails() {
             Submit
           </Button>
         </SignupBtn>
-
-        <Modal text={"HELLO"} />
       </div>
     </MainContainer>
   );
