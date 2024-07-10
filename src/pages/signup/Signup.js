@@ -3,7 +3,6 @@ import styled from "styled-components";
 import HRM from "../../assets/images/Logo.jpg";
 import { Button, TextField } from "@mui/material";
 import { FREE_TRIAL } from "../../constants/textConstants";
-import Modal from "../../components/Modal";
 
 const MainContainer = styled.div`
   max-width: 900px;

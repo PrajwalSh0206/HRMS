@@ -11,19 +11,9 @@ import CompanyDetails from "../pages/company/CompanyDetails";
 
 const router = createBrowserRouter([
   {
-    element: <AppLayout />,
-    children: [
-      {
-        path: "/dashboard",
-        element: <Dashboard />,
-      },
-      {
-        path: "/",
-        element: <Landingpage />,
-      },
-    ],
+    path: "/",
+    element: <Landingpage />,
   },
-
   {
     path: "/signup",
     element: <Signup />,
@@ -35,6 +25,15 @@ const router = createBrowserRouter([
   {
     path: "/companydetails",
     element: <CompanyDetails />,
+  },
+  {
+    element: <AppLayout />,
+    children: [
+      {
+        path: "/dashboard",
+        element: <Dashboard />,
+      },
+    ],
   },
 ]);
 
