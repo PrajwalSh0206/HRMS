@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import styled from "styled-components";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
-import { SIDEBAR_CONTENTS } from "../constants/textConstants";
+import { SIDEBAR_CONTENTS } from "../constants/dataConstants";
 
 const Layout = styled.div`
   display: flex;
