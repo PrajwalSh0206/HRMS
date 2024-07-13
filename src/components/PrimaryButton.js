@@ -28,6 +28,7 @@ export default function PrimaryButton(props) {
     marginTop,
     boxShadow,
     border,
+    letterSpacing,
     ...other
   } = props;
 
@@ -48,6 +49,7 @@ export default function PrimaryButton(props) {
     alignItems: alignItems || "none",
     marginTop: marginTop || "none",
     border: border || "none",
+    letterSpacing:letterSpacing ||"none",
     ...customStyle,
     "&:hover": {
       bgcolor: backgroundColor,

@@ -8,6 +8,7 @@ import Login from "../pages/login/Login";
 import Landingpage from "../pages/Landing";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import CompanyDetails from "../pages/company/CompanyDetails";
+import Otp from "../pages/otp/Otp";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: "/companydetails",
     element: <CompanyDetails />,
+  },
+  {
+    path: "/mobile-otp",
+    element: <Otp />,
   },
   {
     element: <AppLayout />,
