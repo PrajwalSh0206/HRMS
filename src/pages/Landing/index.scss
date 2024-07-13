@@ -51,6 +51,7 @@ $lightblue: #4f9cf9;
         outline: 0;
         border: 0;
         background-color: $lightblue;
+        transition: all 0.2s;
         &:active {
           transform: scale(0.9);
         }
@@ -191,7 +192,7 @@ $lightblue: #4f9cf9;
     }
   }
   > #client {
-    padding: 0 100px ;
+    padding: 0 120px 100px 120px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -209,6 +210,98 @@ $lightblue: #4f9cf9;
 
       > * + * {
         margin-left: 0.25rem * 4;
+      }
+    }
+  }
+  > footer {
+    background-color: $indigo;
+    padding: 100px 120px 50px 120px;
+    color: #fff;
+    > main {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 0.25rem * 6;
+      .description {
+        > p:first-child {
+          font-weight: 600;
+        }
+      }
+      > div {
+        width: 20%;
+        > * + * {
+          margin-top: 0.25rem * 2;
+        }
+      }
+      .links {
+        display: flex;
+        flex-direction: column;
+        > p {
+          font-weight: 600;
+          font-size: large;
+        }
+        > * + * {
+          margin-top: 0.25rem * 2;
+        }
+        a {
+          color: #d3d3d3;
+          text-decoration: none;
+        }
+      }
+      > * + * {
+        margin-left: 0.25rem * 15;
+      }
+      & > div:last-child {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        > * + * {
+          margin-top: 0.25rem * 3;
+        }
+        button {
+          border-radius: 0.25rem * 2;
+          display: flex;
+          align-items: center;
+          padding: 10px 20px;
+          cursor: pointer;
+          color: #fff;
+          outline: 0;
+          border: 0;
+          background-color: $lightblue;
+          transition: all 0.2s;
+          &:active {
+            transform: scale(0.9);
+          }
+          &.login {
+            background-color: $golden;
+            color: black;
+          }
+          > * + * {
+            padding-left: 0.25rem * 2;
+          }
+        }
+      }
+    }
+    .social-links {
+      border-top: 1px solid #3374be;
+      display: flex;
+      padding-top: 0.25rem * 6;
+      justify-content: space-between;
+      align-items: center;
+      .clause {
+        display: flex;
+        > * + * {
+          margin-left: 0.25rem * 8;
+        }
+      }
+      .logo {
+        display: flex;
+        > * + * {
+          margin-left: 0.25rem * 3;
+        }
+        a {
+          color: white;
+          text-decoration: none;
+        }
       }
     }
   }
