@@ -5,7 +5,7 @@ import AppLayout from "../Layout/AppLayout";
 //page imports
 import Signup from "../pages/signup/Signup";
 import Login from "../pages/login/Login";
-import Landingpage from "../pages/Landingpage/Landingpage";
+import Landingpage from "../pages/Landing";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import CompanyDetails from "../pages/company/CompanyDetails";
 

@@ -38,9 +38,11 @@
     "postcss": "^8.4.38",
     "postcss-loader": "^8.1.1",
     "react-router-dom": "^6.24.0",
+    "sass": "^1.77.8",
+    "sass-loader": "^14.2.1",
     "style-loader": "^3.3.4",
     "tailwindcss": "^3.4.3",
-    "webpack": "^5.90.0",
+    "webpack": "^5.93.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
   }
