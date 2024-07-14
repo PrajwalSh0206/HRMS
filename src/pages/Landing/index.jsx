@@ -10,6 +10,7 @@ import Logo from "../../assets/images/hrm.png";
 import Card from "./components/Card/Card";
 import ClientCard from "./components/ClientCard/ClientCard";
 import AvatarImg from "../../assets/images/man-avatar-icon-free-vector.jpg";
+import { Link } from "react-router-dom";
 export default function () {
   const pricingData = {
     personal: [

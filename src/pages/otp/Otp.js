@@ -59,8 +59,8 @@ export default function Otp() {
           numInputs={6}
           renderSeparator={<span></span>}
           inputStyle={{
-            padding:"10px 0",
-            width:"1.5em",
+            padding: "10px 0",
+            width: "1.5em",
             marginRight: "10px",
             borderRadius: "5px",
             border: "1px solid #8D75F5",
