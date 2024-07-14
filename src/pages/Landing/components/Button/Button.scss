@@ -1,0 +1,22 @@
+$lightblue: #4f9cf9;
+
+.btn {
+  margin-top: 0.25rem * 12 !important;
+  font-size: 0.25rem * 4;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: $lightblue;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  border: 0;
+  border-radius: 0.25rem *2;
+  transition: ease-in-out;
+  &:active {
+    transform: scale(0.9);
+  }
+  > * + * {
+    margin-left: 0.25rem * 2;
+  }
+}

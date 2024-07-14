@@ -1,0 +1,76 @@
+$golden: #ffe492;
+$green: rgb(34 197 94);
+$indigo: #043873;
+$lightblue: #4f9cf9;
+
+.card {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  align-items: flex-start;
+  border: 2px solid $golden;
+  border-radius: 10px;
+  &.active {
+    background-color: $indigo;
+    color: white;
+    padding: 80px 60px;
+    border: 2px solid $indigo;
+  }
+  .title {
+    font-size: 0.25rem * 6;
+  }
+  .amount {
+    font-size: 0.25rem * 8;
+    font-weight: 600;
+    &.active {
+      color: $golden;
+    }
+  }
+  .list {
+    list-style: none;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    > * + * {
+      margin-top: 0.25rem * 6;
+    }
+    div {
+      display: flex;
+      align-items: flex-start;
+      > * + * {
+        margin-left: 0.25rem * 2;
+      }
+
+      svg {
+        flex-shrink: 0;
+        flex-grow: 0;
+        height: 20px;
+        color: $green;
+      }
+    }
+  }
+  button {
+    padding: 15px 20px;
+    background-color: white;
+    border: 2px solid $golden;
+    border-radius: 0.25rem * 2;
+    transition: ease-in-out;
+    cursor: pointer;
+    &.active {
+      background-color: $lightblue;
+      color: white;
+      border: 2px solid $lightblue;
+    }
+    &:hover:not(.active) {
+      background-color: $golden;
+    }
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+  > * + * {
+    margin-top: 0.25rem * 5;
+  }
+}

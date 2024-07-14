@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+$indigo: #043873;
+$padding-common: 100px 120px 100px 120px;
+$infosection-padding: 0 120px;
+$golden: #ffe492;
+$lightblue: #4f9cf9;
+
+#landing {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  height: 100%;
+  width: 100%;
+  > nav {
+    padding: 20px 120px;
+    background-color: $indigo;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    > .logo {
+      display: flex;
+      color: white;
+      align-items: center;
+      > * + * {
+        margin-left: 0.25rem * 3;
+      }
+      img {
+        height: 0.25rem * 12;
+      }
+    }
+    > .links {
+      display: flex;
+      > * + * {
+        margin-left: 0.25rem * 3;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      > button {
+        border-radius: 0.25rem * 2;
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        cursor: pointer;
+        color: #fff;
+        outline: 0;
+        border: 0;
+        background-color: $lightblue;
+        transition: all 0.2s;
+        &:active {
+          transform: scale(0.9);
+        }
+        &.login {
+          background-color: $golden;
+          color: black;
+        }
+        > * + * {
+          padding-left: 0.25rem * 2;
+        }
+      }
+    }
+  }
+  > main {
+    background-color: $indigo;
+    padding: $padding-common;
+    background-image: url("../../assets/images/landing/Element.png");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    > * + * {
+      margin-left: 0.25rem * 4;
+    }
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      color: white;
+      > * + * {
+        margin-top: 0.25rem * 5;
+      }
+      h1 {
+        font-size: 54px;
+        font-weight: 500;
+      }
+    }
+    > img {
+      width: 40%;
+    }
+  }
+
+  > section {
+    padding: 100px 0;
+
+    #info-section {
+      background-image: url("../../assets/images/spiral.png");
+      background-repeat: no-repeat;
+      background-position: 0 50%;
+      padding: 100px 0;
+      > div {
+        padding: $infosection-padding;
+        display: flex;
+        align-items: center;
+
+        > * + * {
+          margin-left: 0.25rem * 12;
+        }
+        div {
+          > * + * {
+            margin-top: 0.25rem * 5;
+          }
+          h1 {
+            font-size: 54px;
+            font-weight: 500;
+          }
+        }
+        > img {
+          width: 50%;
+        }
+      }
+    }
+    #work-together {
+      padding: $infosection-padding;
+      display: flex;
+      align-items: center;
+      > * + * {
+        margin-left: 0.25rem * 12;
+      }
+      div {
+        > * + * {
+          margin-top: 0.25rem * 5;
+        }
+        h1 {
+          font-size: 54px;
+          font-weight: 500;
+        }
+      }
+      > img {
+        width: 45%;
+      }
+    }
+  }
+
+  > #customize {
+    background-color: $indigo;
+    padding: $padding-common;
+    display: flex;
+    align-items: center;
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      color: white;
+      > * + * {
+        margin-top: 0.25rem * 5;
+      }
+      h1 {
+        font-size: 54px;
+        font-weight: 500;
+      }
+    }
+    > * + * {
+      margin-left: 0.25rem * 12;
+    }
+    > img {
+      width: 40%;
+    }
+  }
+  > #payment {
+    padding: $padding-common;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    > * + * {
+      margin-top: 30px;
+    }
+    h1 {
+      font-size: 54px;
+      font-weight: 500;
+    }
+    #card-list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      > * + * {
+        margin-left: 0.25rem * 4;
+      }
+    }
+  }
+  > #client {
+    padding: 0 120px 100px 120px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    > * + * {
+      margin-top: 0.25rem * 5;
+    }
+    h1 {
+      font-size: 54px;
+      font-weight: 500;
+    }
+    .client-list {
+      display: flex;
+      justify-content: center;
+
+      > * + * {
+        margin-left: 0.25rem * 4;
+      }
+    }
+  }
+  > footer {
+    background-color: $indigo;
+    padding: 100px 120px 50px 120px;
+    color: #fff;
+    > main {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 0.25rem * 6;
+      .description {
+        > p:first-child {
+          font-weight: 600;
+        }
+      }
+      > div {
+        width: 20%;
+        > * + * {
+          margin-top: 0.25rem * 2;
+        }
+      }
+      .links {
+        display: flex;
+        flex-direction: column;
+        > p {
+          font-weight: 600;
+          font-size: large;
+        }
+        > * + * {
+          margin-top: 0.25rem * 2;
+        }
+        a {
+          color: #d3d3d3;
+          text-decoration: none;
+        }
+      }
+      > * + * {
+        margin-left: 0.25rem * 15;
+      }
+      & > div:last-child {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        > * + * {
+          margin-top: 0.25rem * 3;
+        }
+        button {
+          border-radius: 0.25rem * 2;
+          display: flex;
+          align-items: center;
+          padding: 10px 20px;
+          cursor: pointer;
+          color: #fff;
+          outline: 0;
+          border: 0;
+          background-color: $lightblue;
+          transition: all 0.2s;
+          &:active {
+            transform: scale(0.9);
+          }
+          &.login {
+            background-color: $golden;
+            color: black;
+          }
+          > * + * {
+            padding-left: 0.25rem * 2;
+          }
+        }
+      }
+    }
+    .social-links {
+      border-top: 1px solid #3374be;
+      display: flex;
+      padding-top: 0.25rem * 6;
+      justify-content: space-between;
+      align-items: center;
+      .clause {
+        display: flex;
+        > * + * {
+          margin-left: 0.25rem * 8;
+        }
+      }
+      .logo {
+        display: flex;
+        > * + * {
+          margin-left: 0.25rem * 3;
+        }
+        a {
+          color: white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
