@@ -59,13 +59,14 @@ export default function Otp() {
           numInputs={6}
           renderSeparator={<span></span>}
           inputStyle={{
-            padding: "30px",
+            padding:"10px 0",
+            width:"1.5em",
             marginRight: "10px",
             borderRadius: "5px",
             border: "1px solid #8D75F5",
             color: "#000",
             backgroundColor: "#fff",
-            fontSize: "20px",
+            fontSize: "45px",
           }}
           focusStyle={{
             border: "1px solid #8D75F5",
