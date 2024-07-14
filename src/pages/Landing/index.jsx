@@ -10,8 +10,11 @@ import Logo from "../../assets/images/hrm.png";
 import Card from "./components/Card/Card";
 import ClientCard from "./components/ClientCard/ClientCard";
 import AvatarImg from "../../assets/images/man-avatar-icon-free-vector.jpg";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 export default function () {
+  const navigate = useNavigate();
+
   const pricingData = {
     personal: [
       "Sync unlimited devices",
@@ -23,6 +26,10 @@ export default function () {
     ],
   };
 
+  const handleRedirect = (e) => {
+    e.preventDefault();
+    navigate("/login");
+  };
   return (
     <div id="landing">
       <nav>
@@ -31,11 +38,27 @@ export default function () {
           <p>HRMS</p>
         </div>
         <div className="links">
-          <button className="login">Login</button>
+          <button className="login" onClick={handleRedirect}>
+            Login
+          </button>
           <button>
             <p>Try HRMS free</p>
-            <svg width="24px" height="24px" viewBox="0 0 24 24" strokeWidth="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor">
-              <path d="M3 12L21 12M21 12L12.5 3.5M21 12L12.5 20.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+            <svg
+              width="24px"
+              height="24px"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              color="currentColor"
+            >
+              <path
+                d="M3 12L21 12M21 12L12.5 3.5M21 12L12.5 20.5"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              ></path>
             </svg>
           </button>
         </div>
@@ -46,7 +69,10 @@ export default function () {
             Get More Done with
             <br /> HRMS
           </h1>
-          <p>Project management software that enables your teams to collaborate, plan, analyze and manage everyday tasks</p>
+          <p>
+            Project management software that enables your teams to collaborate,
+            plan, analyze and manage everyday tasks
+          </p>
           <Button title={"Try HRMS free"}></Button>
         </div>
         <img src={Image} alt="team" />
@@ -90,8 +116,9 @@ export default function () {
             to your needs
           </h1>
           <p>
-            Customise the app with plugins, custom themes and multiple text editors (Rich Text or Markdown). Or create your own scripts and plugins using the
-            Extension API.
+            Customise the app with plugins, custom themes and multiple text
+            editors (Rich Text or Markdown). Or create your own scripts and
+            plugins using the Extension API.
           </p>
           <Button title={"Lets Go"}></Button>
         </div>
@@ -100,12 +127,30 @@ export default function () {
       <div id="payment">
         <h1>Choose Your Plan</h1>
         <p>
-          Whether you want to get organized, keep your personal life on track, or boost workplace productivity, Evernote has the <br /> right plan for you.
+          Whether you want to get organized, keep your personal life on track,
+          or boost workplace productivity, Evernote has the <br /> right plan
+          for you.
         </p>
         <div id="card-list">
-          <Card amount={"$0"} list={pricingData.personal} description={"Capture ideas and find them quickly"} title={"Free"}></Card>
-          <Card amount={"$11.99"} active={true} list={pricingData.personal} description={"Keep home and family on track"} title={"Personal"}></Card>
-          <Card amount={"$49.99"} list={pricingData.personal} description={"Capture ideas and find them quickly"} title={"Organization"}></Card>
+          <Card
+            amount={"$0"}
+            list={pricingData.personal}
+            description={"Capture ideas and find them quickly"}
+            title={"Free"}
+          ></Card>
+          <Card
+            amount={"$11.99"}
+            active={true}
+            list={pricingData.personal}
+            description={"Keep home and family on track"}
+            title={"Personal"}
+          ></Card>
+          <Card
+            amount={"$49.99"}
+            list={pricingData.personal}
+            description={"Capture ideas and find them quickly"}
+            title={"Organization"}
+          ></Card>
         </div>
       </div>
       <div id="client">
@@ -120,7 +165,10 @@ export default function () {
         <main>
           <div className="description">
             <p>HRMS</p>
-            <p>HRMS was created for the new ways we live and work. We make a better workspace around the world</p>
+            <p>
+              HRMS was created for the new ways we live and work. We make a
+              better workspace around the world
+            </p>
           </div>
           <div className="links">
             <p>Product</p>
@@ -145,7 +193,15 @@ export default function () {
             <p>Get started for free. Add your whole team as your needs grow.</p>
             <button>
               <p>Start today</p>
-              <svg width="24px" height="24px" viewBox="0 0 24 24" strokeWidth="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor">
+              <svg
+                width="24px"
+                height="24px"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                color="currentColor"
+              >
                 <path
                   d="M3 12L21 12M21 12L12.5 3.5M21 12L12.5 20.5"
                   stroke="currentColor"
@@ -166,7 +222,15 @@ export default function () {
           </div>
           <div className="logo">
             <a href="#">
-              <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor">
+              <svg
+                width="24px"
+                height="24px"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                color="currentColor"
+              >
                 <path
                   d="M14 12L10.5 14V10L14 12Z"
                   fill="currentColor"
@@ -183,7 +247,15 @@ export default function () {
               </svg>
             </a>
             <a href="#">
-              <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor">
+              <svg
+                width="24px"
+                height="24px"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                color="currentColor"
+              >
                 <path
                   d="M21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8Z"
                   stroke="currentColor"
@@ -198,11 +270,25 @@ export default function () {
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 ></path>
-                <path d="M9 13H11H15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path
+                  d="M9 13H11H15"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
               </svg>
             </a>
             <a href="#">
-              <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor">
+              <svg
+                width="24px"
+                height="24px"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                color="currentColor"
+              >
                 <path
                   d="M21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8Z"
                   stroke="currentColor"
@@ -210,7 +296,13 @@ export default function () {
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 ></path>
-                <path d="M7 17V13.5V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path
+                  d="M7 17V13.5V10"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
                 <path
                   d="M11 17V13.75M11 10V13.75M11 13.75C11 10 17 10 17 13.75V17"
                   stroke="currentColor"
@@ -218,7 +310,13 @@ export default function () {
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 ></path>
-                <path d="M7 7.01L7.01 6.99889" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path
+                  d="M7 7.01L7.01 6.99889"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
               </svg>
             </a>
           </div>

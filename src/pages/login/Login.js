@@ -3,6 +3,7 @@ import styled from "styled-components";
 import HRM from "../../assets/images/Logo.jpg";
 import { Button, TextField } from "@mui/material";
 import { LOGIN_HERE, WELCOME } from "../../constants/textConstants";
+import { Link } from "react-router-dom";
 
 const MainContainer = styled.div`
   max-width: 900px;
@@ -33,6 +34,13 @@ const FormContainer = styled.div`
 const SignupBtn = styled.div`
   display: block;
   text-align: center;
+`;
+
+const LoginLink = styled.div`
+  text-align: center;
+  margin-top: 20px;
+  letter-spacing: 1px;
+  font-weight: 600;
 `;
 
 const focusedTextFieldStyle = {
@@ -112,6 +120,11 @@ export default function Login() {
             Login
           </Button>
         </SignupBtn>
+        <LoginLink>
+          <span>
+            Dont have an account ? <Link to="/signup">Signup</Link>
+          </span>
+        </LoginLink>
       </div>
     </MainContainer>
   );

@@ -7,7 +7,7 @@ import {
   EMAIL_ERROR_MESSAGE,
   MOBILE_ERROR_MESSAGE,
 } from "../../constants/textConstants";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { EMAIL, MOBILE_REGEX } from "../../constants/regex";
 
 const MainContainer = styled.div`
@@ -45,6 +45,13 @@ const Error = styled.span`
 const SignupBtn = styled.div`
   display: block;
   text-align: center;
+`;
+
+const LoginLink = styled.div`
+  text-align: center;
+  margin-top: 20px;
+  letter-spacing: 1px;
+  font-weight: 600;
 `;
 
 const focusedTextFieldStyle = {
@@ -184,6 +191,11 @@ export default function Signup() {
             FREE SIGN UP
           </Button>
         </SignupBtn>
+        <LoginLink>
+          <span>
+            Already have an account ? <Link to="/login">Login</Link>
+          </span>
+        </LoginLink>
       </div>
     </MainContainer>
   );
